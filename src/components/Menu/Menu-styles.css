@@ -1,0 +1,94 @@
+/* Estilos gerais do painel */
+.painel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+
+  background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede repetição da imagem */
+  margin: 0;
+  filter: brightness(0.8); /* Adiciona um filtro para escurecer a imagem, garantindo que o texto e botões fiquem legíveis */
+}
+
+body{
+  background-image: url('/public/img/1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+}
+/* Estilos para a grade de botões */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 280px); /* Aumentar o tamanho para botões maiores */
+  gap: 40px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade para que a imagem de fundo ainda seja visível */
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Estilos para cada botão */
+.grid-button {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #26ad2a, #32ad38); /* Gradiente verde */
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Mais espaço entre o ícone e o texto */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Efeito hover nos botões */
+.grid-button:hover {
+  background: linear-gradient(135deg, #66bb6a, #2e7d32); /* Verde mais claro para hover */
+  transform: translateY(-7px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de clique nos botões */
+.grid-button:active {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #388e3c, #2e7d32); /* Verde mais escuro no clique */
+}
+
+/* Estilo do ícone no botão */
+.button-icon {
+  font-size: 28px; /* Aumentar o tamanho do ícone */
+  transition: transform 0.2s ease;
+}
+
+/* Efeito de hover no ícone */
+.grid-button:hover .button-icon {
+  transform: scale(1.2);
+}
+
+/* Media query para dispositivos menores */
+@media (max-width: 768px) {
+  .button-grid {
+    grid-template-columns: 1fr; /* Colocar todos os botões em uma coluna em telas pequenas */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .grid-button {
+    font-size: 16px;
+    padding: 18px;
+  }
+
+  .button-icon {
+    font-size: 24px;
+  }
+}

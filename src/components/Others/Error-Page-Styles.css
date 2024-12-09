@@ -1,0 +1,62 @@
+/* Error-Page-Styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eaeaea;
+}
+
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.error-content {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Aumentado para dar mais espaço entre imagem e texto */
+  max-width: 1200px; /* Permitir que o layout ocupe mais largura */
+  padding: 20px;
+}
+
+.monster-image {
+  width: 50%; /* Aumentar proporcionalmente com relação ao container */
+  height: auto;
+  flex-shrink: 0;
+}
+
+.error-text {
+  flex: 1; /* Permitir que o texto ocupe o restante do espaço */
+  text-align: left; /* Garantir alinhamento à esquerda */
+}
+
+h1 {
+  font-size: 3rem; /* Aumentar título para acompanhar a proporção da imagem */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem; /* Texto maior para melhorar a legibilidade */
+  color: #555;
+  line-height: 1.6; /* Melhor espaçamento entre linhas */
+  margin-bottom: 30px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 15px 25px; /* Aumentar botão para destacar */
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2rem; /* Texto maior no botão */
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}

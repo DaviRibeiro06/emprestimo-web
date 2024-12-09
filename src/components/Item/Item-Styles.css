@@ -1,0 +1,159 @@
+/* Centralizar o contêiner no meio da tela */
+.container {
+  padding: 30px; /* Aumentar o espaço interno */
+  max-width: 600px; /* Aumentar a largura do contêiner */
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Cantos mais suaves */
+  background-color: #ffffff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  font-family: 'Arial', sans-serif;
+  
+  /* Centralização */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   /* Gradiente de fundo */
+}
+
+/* Títulos */
+.container h2, .container h3 {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 25px; /* Mais espaçamento */
+  font-size: 1.8em; /* Tamanhos maiores */
+}
+
+/* Campos de entrada */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.1em; /* Fonte maior */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px; /* Mais espaço interno */
+  border: 1px solid #ccc;
+  border-radius: 90px;
+  box-sizing: border-box;
+  font-size: 1em; /* Fonte maior */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+/* Efeito de foco nos inputs */
+input:focus {
+  border-color: #03a9f4;
+  outline: none;
+  box-shadow: 0 0 15px rgba(3, 169, 244, 0.4); /* Efeito de brilho azul ao focar */
+}
+
+/* Estilo do botão */
+button, .button-primary, .button-danger {
+  background: linear-gradient(90deg, #ff5722, #f44336); /* Gradiente laranja-vermelho */
+  color: #ffffff;
+  padding: 15px;
+  border: none;
+  border-radius: 90px; /* Bordas arredondadas no botão */
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  width: 100%; /* Garantir que o botão ocupe a largura total */
+}
+
+/* Efeito de hover no botão */
+button:hover, .button-primary:hover, .button-danger:hover {
+  background: linear-gradient(90deg, #32d301, #32d301);
+  transform: translateY(-3px); /* Elevação ao passar o mouse */
+}
+
+/* Efeito de clique no botão */
+button:active, .button-primary:active, .button-danger:active {
+  transform: scale(0.95); /* Reduzido levemente no clique */
+}
+
+/* Estilo para o botão de exclusão */
+.button-danger {
+  background: linear-gradient(90deg, #ff5722, #f44336); /* Gradiente laranja-vermelho */
+}
+
+/* Estilo para o botão de adicionar item */
+.button-primary {
+  background: linear-gradient(90deg, #4CAF50, #45a049); /* Gradiente verde */
+}
+
+/* Mensagens */
+.message {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 1em; /* Fonte maior */
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Lista de itens */
+.item-list {
+  margin-top: 40px;
+}
+
+.item-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.item-list li {
+  background-color: #f9f9f9;
+  margin: 15px 0;
+  padding: 20px; /* Mais espaço interno */
+  border-radius: 12px; /* Cantos mais suaves */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em; /* Fonte maior */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona um efeito de profundidade */
+}
+
+.item-list li .button-danger {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px; /* Mais espaço interno */
+  font-size: 1em; /* Fonte maior */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.item-list li .button-danger:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    max-width: 90%; /* Adapta ao tamanho da tela */
+  }
+
+  .button-primary, .item-list li .button-danger {
+    padding: 12px;
+    font-size: 1em;
+  }
+}

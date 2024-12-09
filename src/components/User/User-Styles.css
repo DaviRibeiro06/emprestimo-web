@@ -1,0 +1,137 @@
+/* Estilos gerais para o corpo */
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  flex-direction: column; /* Alinha o título acima do formulário */
+  gap: 20px; /* Espaço entre o título e o formulário */
+  
+
+/* Estilo do título */
+h1 {
+  font-size: 28px;
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Estilo do formulário */
+form {
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+  padding: 40px;
+  max-width: 420px; /* Largura máxima */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento uniforme entre os elementos */
+  text-align: center;
+}
+
+/* Estilo dos inputs */
+input {
+  width: 100%; /* Garante que os inputs ocupem toda a largura disponível */
+  padding: 16px; /* Ajuste no padding */
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Bordas mais arredondadas */
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box; /* Garante que o padding não afete a largura do input */
+}
+
+/* Estilo para o placeholder dos inputs */
+input::placeholder {
+  color: #9e9e9e;
+}
+
+/* Efeito de foco nos inputs */
+input:focus {
+  border-color: #32d301;
+  outline: none;
+  box-shadow: 0 0 15px rgba(5, 255, 72, 0.4); /* Efeito de brilho azul ao focar */
+}
+
+/* Estilo do botão */
+button {
+  background: linear-gradient(90deg, #2e9f0c, #269703); /* Gradiente verde */
+  color: #ffffff;
+  padding: 15px;
+  border: none;
+  border-radius: 90px; /* Bordas arredondadas no botão */
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  width: 100%; /* Garantir que o botão ocupe a largura total */
+  text-align: center;
+}
+
+/* Efeito de hover no botão */
+button:hover {
+  background: linear-gradient(90deg, #32d301, #32d301);
+  transform: translateY(-3px); /* Elevação ao passar o mouse */
+}
+
+/* Efeito de clique no botão */
+button:active {
+  transform: scale(0.95); /* Reduzido levemente no clique */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  form {
+    padding: 25px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+/* Estilo para a lista de itens */
+.item-list {
+  margin-top: 40px;
+}
+
+.item-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.item-list li {
+  background-color: #f9f9f9;
+  margin: 15px 0;
+  padding: 20px; /* Mais espaço interno */
+  border-radius: 12px; /* Cantos mais suaves */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em; /* Fonte maior */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona um efeito de profundidade */
+}
+
+/* Estilo para os botões dentro da lista de itens */
+.item-list li .button-danger {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px; /* Mais espaço interno */
+  font-size: 1em; /* Fonte maior */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.item-list li .button-danger:hover {
+  background-color: #d32f2f;
+}
+}
